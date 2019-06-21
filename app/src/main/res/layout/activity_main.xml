@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"/>
+
+
+        <!--一、ProgressBar有如下几种常见样式-->
+        <!--1、默认进度条的样式为圆圈（为中等大小的圆圈）-->
+        <!--<ProgressBar-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--2、显示为大的尺寸的圆圈-->
+        <!--style="?android:attr/progressBarStyleLarge"-->
+        <!--4、显示为直条形的-->
+        <!--style="?android:attr/progressBarStyleHorizontal"-->
+        <!--二 、直条形进度条-->
+        <!--设置为一直在旋转的样式-->
+        <!--android:indeterminate="true"-->
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:progressDrawable="@drawable/progressbar_bg"
+            android:layout_height="50dp"
+            android:indeterminate="false"
+            android:progress="5000"
+            android:secondaryProgress="8000"
+            android:max="10000"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Button"
+            android:text="Button" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
